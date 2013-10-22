@@ -202,7 +202,8 @@ delayScreensaver()
     elif [ "$screensaver" == "kscreensaver" ]; then
         qdbus org.freedesktop.ScreenSaver /ScreenSaver SimulateUserActivity > /dev/null
     elif [ "$screensaver" == "xautolock" ]; then
-        xautolock -restart
+        xautolock -disable
+        xautolock -enable
     fi
 
 
